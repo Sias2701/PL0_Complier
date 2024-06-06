@@ -1,0 +1,10 @@
+^C:\USERS\SIAS\DESKTOP\PL0\BUILD\CMAKEFILES\3BB1C12DDD76F9A4BB75DCA1215C9E25\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/sias/Desktop/PL0 -BC:/Users/sias/Desktop/PL0/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/sias/Desktop/PL0/build/PL0.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

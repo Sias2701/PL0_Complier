@@ -1,0 +1,32 @@
+procedure void func(integer i)
+begin
+    if ( i > 5 ) then
+    begin
+        write(1);
+        write('\n');
+    end
+
+    else begin 
+        write(2);
+        write('\n');
+    end
+
+    for int i := 0 until i < 5 step i++ repeat
+    begin
+        write(i);
+        write('\n');
+    end
+    while 1 == 0 do
+        i := 1;
+    
+    var integer a :=1;
+    var float b := 2;
+    do
+        write(a + b);
+    while 45 == 0 ;
+end
+
+procedure int main()
+begin
+    func(1);
+end

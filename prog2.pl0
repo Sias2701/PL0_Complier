@@ -1,0 +1,68 @@
+procedure incdec
+begin
+    var integer i;
+    var integer j;
+    const integer a := 5;
+    i := 3;
+    j := 4;
+    i :+= j++;
+    write(i);
+    i :-= ++j + a;
+    write(i);
+
+    var float k;
+    var float l;
+    
+    k := 3.6;
+    l := 4.7;
+    k :*= l++;
+    write(k);
+    k :/= ++l;
+    write(k);
+end
+
+procedure iftest
+begin
+    typedef int integer;
+    var int i;
+    read(i);
+    if i > 2 then begin
+        i :+= 2;
+    end
+    else begin
+        i :*= 3;
+    end
+    write(i);
+end
+
+procedure fortest
+begin
+    var integer i;
+    for i := 0; until i >5 step i :+= 1; repeat
+    begin
+        write(i);
+    end
+end
+
+procedure whiletest 
+begin
+    var integer i;
+    i := 1;
+    while i <= 20 do begin
+        write(i);
+        i :*= 2;
+    end
+end
+
+procedure main
+begin
+    call incdec;
+    call iftest;
+    call fortest;
+    call whiletest;
+    var float i;
+    var integer j;
+    j := 3;
+    i := (2.3 * 3.6 + 1) * j;
+    write(i);
+end

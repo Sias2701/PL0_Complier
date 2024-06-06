@@ -1,0 +1,6 @@
+procedure main
+begin
+    var integer i;
+    read(i);
+    write(i);
+end

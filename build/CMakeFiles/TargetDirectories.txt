@@ -1,0 +1,4 @@
+C:/Users/sias/Desktop/PL0/build/CMakeFiles/PL0.dir
+C:/Users/sias/Desktop/PL0/build/CMakeFiles/PL0VM.dir
+C:/Users/sias/Desktop/PL0/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/sias/Desktop/PL0/build/CMakeFiles/ZERO_CHECK.dir
