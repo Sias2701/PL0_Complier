@@ -8,9 +8,7 @@
 #include <iostream>
 #include <fstream>
 
-typedef unsigned int WORD;
-
-#define PRESERVED_STACK_SIZE 1000
+#define PRESERVED_STACK_SIZE 1024
 
 class VirtualMachine {
 private:
@@ -30,11 +28,5 @@ public:
     }
     void run();
 };
-
-WORD prepare_inst(WORD opcode, WORD op1, WORD op2);
-WORD int_to_word(int i);
-WORD char_to_word(char i);
-WORD float_to_word(char i);
-
 
 #endif

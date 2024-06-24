@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\sias\Desktop\PL0\build\x64\Release\ZERO_CHECK</FullPath>
+      <FullPath>C:\Users\sias\Desktop\PL0_Complier\build\x64\Release\ZERO_CHECK</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\sias\Desktop\PL0\build\Release\PL0.exe</FullPath>
+      <FullPath>C:\Users\sias\Desktop\PL0_Complier\build\Release\PL0.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

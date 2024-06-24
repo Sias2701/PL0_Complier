@@ -6,7 +6,7 @@
 #include "stream/token_stream.h"
 #include "parser/expression.h"
 #include "parser/condition_factor.h"
-#include "vm/vm.h"
+#include "vm/instruction.h"
 
 enum class PLStatementType : unsigned char {
     CONSTDECL,
@@ -49,6 +49,13 @@ struct PLObjectTable {
         }
         if(father_ptr != nullptr) {
             ret += father_ptr->size();
+        }
+        return ret;
+    }
+    size_t current_domain_size() {
+        size_t ret = 0;
+        for(auto &i : objects) {
+            ret += i.ctx_size;
         }
         return ret;
     }

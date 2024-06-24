@@ -46,6 +46,12 @@ bool PLStatementParser::block_handler(std::shared_ptr<std::vector<WORD>> instruc
     if(current_token.type != TokenType::KEYWORD && std::any_cast<std::string>(current_token.object) == "end"){
         throw "BLOCK ERROR";
     }
+    instruction->push_back(prepare_inst(SUBW, REG, IMM));
+    instruction->push_back(SP);
+    instruction->push_back(object_table->current_domain_size());
+    instruction->push_back(prepare_inst(MOV, REG, REG));
+    instruction->push_back(RR);
+    instruction->push_back(SP);
     this->stream->next();
     return has_ret;
 }

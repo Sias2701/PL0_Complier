@@ -1,7 +1,7 @@
 #ifndef __PL0_INSTRUCTION__
 #define __PL0_INSTRUCTION__
 
-#include "vm/vm.h"
+typedef unsigned int WORD;
 
 #define PUSH  0x1000u
 #define POP   0x2000u
@@ -67,11 +67,16 @@
 
 #define HALT 0xFFFFu
 
-
 #define IMM 0x00u
 #define REG 0x01u
 #define MEM 0x10u
 #define SEG 0x11u
 #define EMP 0xFFu
+
+WORD prepare_inst(WORD opcode, WORD op1, WORD op2);
+WORD int_to_word(int i);
+WORD char_to_word(char i);
+WORD float_to_word(char i);
+
 
 #endif

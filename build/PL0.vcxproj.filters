@@ -55,7 +55,7 @@
     <ClCompile Include="C:\Users\sias\Desktop\PL0\runtime\statement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\sias\Desktop\PL0\vm\vm.cpp">
+    <ClCompile Include="C:\Users\sias\Desktop\PL0\vm\instruction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

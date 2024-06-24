@@ -26,7 +26,7 @@ SemanticToken PLConditionFactorParser::parse() {
         warp.type = SemanticTokenType::ODD;
         this->suffix_stack->push_back(warp);
         ret.type = SemanticTokenType::CONDITION_FACTOR;
-        ret.object = std::make_shared<SemanticToken>(warp);
+        ret.object = std::make_any<SemanticToken>(warp);
     }
     SemanticToken op1 = expr_parser.parse();
     if(op1.type != SemanticTokenType::EXPRESSION) {

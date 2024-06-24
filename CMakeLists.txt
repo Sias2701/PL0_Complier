@@ -25,7 +25,7 @@ add_executable(PL0
     parser/condition_term.cpp
     parser/condition_factor.cpp
     runtime/statement.cpp
-    vm/vm.cpp
+    vm/instruction.cpp
 )
 
 add_executable(PL0VM
