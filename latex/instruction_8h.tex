@@ -1,0 +1,507 @@
+\hypertarget{instruction_8h}{}\doxysection{vm/instruction.h File Reference}
+\label{instruction_8h}\index{vm/instruction.h@{vm/instruction.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{instruction_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a431b92b32ec924789b2be268651a3fdd}{PUSH}}~0x1000u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a0b06d6d6f5a540a62659a417de0ad69d}{POP}}~0x2000u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a776bc71647ab698d7e0a74ab1ee75846}{READW}}~0x3000u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a32cd6ddf0512c1a66af27c304b8d6f8d}{READB}}~0x3001u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a22f9ee7e821638403edb5228991bb08b}{READF}}~0x3002u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_aa35e5661701ee9468292e7638034876c}{WRITEW}}~0x4000u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_addcd204eb15a640ac18a8675c1f8366a}{WRITEB}}~0x4001u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a057f52b2594ef1bdd458be4b7f371e51}{WRITEF}}~0x4002u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_ac10aad1745bdb3f1e8f685bbf9dd29d7}{CMPW}}~0x5000u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a51fb4b058d48bdbb70bb994af206de2c}{CMPB}}~0x5001u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a77584aa16b076d815312786499f93d68}{CMPF}}~0x5002u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a35e1459a1f52ce4fc0834f47b408ee29}{JMP}}~0x\+A000u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a0aadd52e0701b04b7d48ae42a29da802}{JG}}~0x\+A001u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a07db26103640fbb48480d5066c995d46}{JL}}~0x\+A002u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a61adf7b292d40bd77c0ee35cb9eb2597}{JE}}~0x\+A003u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a46cadd49a02da540cf99ad4adfc178e4}{JNE}}~0x\+A004u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a9ce248f02cf5c3c33710a49269bb23ca}{JEG}}~0x\+A005u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a7d4c9f1ccd9a37d16e61f0f9e574bbc7}{JEL}}~0x\+A006u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_ab53e2578b9512e8a9cbf0083c31c9e9d}{JODD}}~0x\+A007u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a5619969d16043a27872b7dd712539ce9}{ADDW}}~0x6000u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a2d11cb05279d5d2538d4d864e22b7d0b}{SUBW}}~0x6001u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a0d20f8734163f10d3093ea89511fdd86}{MULW}}~0x6002u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a0ec0abb74473bb243f77d9fb7dc7a1f3}{DIVW}}~0x6003u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_ae7437dbd25f06a1972cd293a9bd984d9}{ADDB}}~0x7000u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a6c5cac30b87d19f4274439a66943f7f1}{SUBB}}~0x7001u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a71db2fcf0467d41080c7d1309a41b388}{MULB}}~0x7002u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a7165747e4681d428fab1d229a2938288}{DIVB}}~0x7003u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a64bcf3faa9d0a12feb55baf8081028cb}{ADDF}}~0x8000u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a996933f06731f18612b4783b99f8b457}{SUBF}}~0x8001u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a96e450627addf5022d262e290e7cd89c}{MULF}}~0x8002u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_aed631e16312ac2243fb4c38e487e7ba0}{DIVF}}~0x8003u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a995b147df1d3d8635c70a4e4414d3042}{CVTW}}~0x9000u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_ad5a2b62721c77f6613bc638c8197e662}{CVTF}}~0x9001u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a0de250395e6a7c0c32a34b50a6254c7d}{HALT}}~0x\+FFFFu
+\item 
+\#define \mbox{\hyperlink{instruction_8h_aa980b5e5e502cf62bdca6c0452b97516}{CALL}}~0x\+FF02u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_ac2544c8b4fe3113b0d6bb62530692c21}{RET}}~0x\+FF01u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a83dd9cfbd1a7223ff60ba56ca6f09ed3}{MOV}}~0x\+E000u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_af00e4b63d736381e1c527ac5ef2c8f3c}{IP}}~0x00000000u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a82b271e081de4cfb35eb87b0c13dddba}{BP}}~0x00000001u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_aecd69d9a67487cc45c38eb184c50538a}{SP}}~0x00000002u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a30a3f049b718d26a32f16ed72716d588}{RA}}~0x00000003u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a171160a766f85c8816b898ed24d28408}{RB}}~0x00000004u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a63979cf6054f403eab1d354e6dcc4ce9}{RR}}~0x00000005u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_adf2a01fd380d9aa8618c131717ce7ecb}{FA}}~0x00000006u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_afa56f653aa38688ca538ba26fcde993c}{FB}}~0x00000007u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_ad937567dd62f7f5abfa1724f07ae6094}{FR}}~0x00000008u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_abaed93a16a0cde13f32bc4dc48b96804}{SR}}~0x00000009u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a6f41e93c17a8a079a6e8776bef15eb8d}{MAXREG}}~0x0000000\+Au
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a0de250395e6a7c0c32a34b50a6254c7d}{HALT}}~0x\+FFFFu
+\item 
+\#define \mbox{\hyperlink{instruction_8h_af9861bac4261f2b4d31c93c1aee088da}{IMM}}~0x00u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_ac12997fa537ec8cbf0f69bf8228cc2a0}{REG}}~0x01u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a249f4b957c983020b02c6c6376c47c6a}{MEM}}~0x10u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a6caf03c3bd2a5c38311029687b07c441}{SEG}}~0x11u
+\item 
+\#define \mbox{\hyperlink{instruction_8h_a19ce640163f7a9d722dafa2459cac550}{EMP}}~0x\+FFu
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \mbox{\hyperlink{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}{WORD}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}{WORD}} \mbox{\hyperlink{instruction_8h_a3e650032e5eb783fae4c62ec516b6afd}{prepare\+\_\+inst}} (\mbox{\hyperlink{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}{WORD}} opcode, \mbox{\hyperlink{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}{WORD}} op1, \mbox{\hyperlink{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}{WORD}} op2)
+\item 
+\mbox{\hyperlink{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}{WORD}} \mbox{\hyperlink{instruction_8h_a07f0467f63d71780cc72e7ac9c680005}{int\+\_\+to\+\_\+word}} (int i)
+\item 
+\mbox{\hyperlink{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}{WORD}} \mbox{\hyperlink{instruction_8h_a2acd7bca9ba0dc1c7052cc3b7c64d152}{char\+\_\+to\+\_\+word}} (char i)
+\item 
+\mbox{\hyperlink{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}{WORD}} \mbox{\hyperlink{instruction_8h_a27947e67e0e183ee00c86a47c4c41be0}{float\+\_\+to\+\_\+word}} (char i)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{instruction_8h_ae7437dbd25f06a1972cd293a9bd984d9}\label{instruction_8h_ae7437dbd25f06a1972cd293a9bd984d9}} 
+\index{instruction.h@{instruction.h}!ADDB@{ADDB}}
+\index{ADDB@{ADDB}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{ADDB}{ADDB}}
+{\footnotesize\ttfamily \#define ADDB~0x7000u}
+
+\mbox{\Hypertarget{instruction_8h_a64bcf3faa9d0a12feb55baf8081028cb}\label{instruction_8h_a64bcf3faa9d0a12feb55baf8081028cb}} 
+\index{instruction.h@{instruction.h}!ADDF@{ADDF}}
+\index{ADDF@{ADDF}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{ADDF}{ADDF}}
+{\footnotesize\ttfamily \#define ADDF~0x8000u}
+
+\mbox{\Hypertarget{instruction_8h_a5619969d16043a27872b7dd712539ce9}\label{instruction_8h_a5619969d16043a27872b7dd712539ce9}} 
+\index{instruction.h@{instruction.h}!ADDW@{ADDW}}
+\index{ADDW@{ADDW}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{ADDW}{ADDW}}
+{\footnotesize\ttfamily \#define ADDW~0x6000u}
+
+\mbox{\Hypertarget{instruction_8h_a82b271e081de4cfb35eb87b0c13dddba}\label{instruction_8h_a82b271e081de4cfb35eb87b0c13dddba}} 
+\index{instruction.h@{instruction.h}!BP@{BP}}
+\index{BP@{BP}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{BP}{BP}}
+{\footnotesize\ttfamily \#define BP~0x00000001u}
+
+\mbox{\Hypertarget{instruction_8h_aa980b5e5e502cf62bdca6c0452b97516}\label{instruction_8h_aa980b5e5e502cf62bdca6c0452b97516}} 
+\index{instruction.h@{instruction.h}!CALL@{CALL}}
+\index{CALL@{CALL}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{CALL}{CALL}}
+{\footnotesize\ttfamily \#define CALL~0x\+FF02u}
+
+\mbox{\Hypertarget{instruction_8h_a51fb4b058d48bdbb70bb994af206de2c}\label{instruction_8h_a51fb4b058d48bdbb70bb994af206de2c}} 
+\index{instruction.h@{instruction.h}!CMPB@{CMPB}}
+\index{CMPB@{CMPB}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{CMPB}{CMPB}}
+{\footnotesize\ttfamily \#define CMPB~0x5001u}
+
+\mbox{\Hypertarget{instruction_8h_a77584aa16b076d815312786499f93d68}\label{instruction_8h_a77584aa16b076d815312786499f93d68}} 
+\index{instruction.h@{instruction.h}!CMPF@{CMPF}}
+\index{CMPF@{CMPF}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{CMPF}{CMPF}}
+{\footnotesize\ttfamily \#define CMPF~0x5002u}
+
+\mbox{\Hypertarget{instruction_8h_ac10aad1745bdb3f1e8f685bbf9dd29d7}\label{instruction_8h_ac10aad1745bdb3f1e8f685bbf9dd29d7}} 
+\index{instruction.h@{instruction.h}!CMPW@{CMPW}}
+\index{CMPW@{CMPW}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{CMPW}{CMPW}}
+{\footnotesize\ttfamily \#define CMPW~0x5000u}
+
+\mbox{\Hypertarget{instruction_8h_ad5a2b62721c77f6613bc638c8197e662}\label{instruction_8h_ad5a2b62721c77f6613bc638c8197e662}} 
+\index{instruction.h@{instruction.h}!CVTF@{CVTF}}
+\index{CVTF@{CVTF}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{CVTF}{CVTF}}
+{\footnotesize\ttfamily \#define CVTF~0x9001u}
+
+\mbox{\Hypertarget{instruction_8h_a995b147df1d3d8635c70a4e4414d3042}\label{instruction_8h_a995b147df1d3d8635c70a4e4414d3042}} 
+\index{instruction.h@{instruction.h}!CVTW@{CVTW}}
+\index{CVTW@{CVTW}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{CVTW}{CVTW}}
+{\footnotesize\ttfamily \#define CVTW~0x9000u}
+
+\mbox{\Hypertarget{instruction_8h_a7165747e4681d428fab1d229a2938288}\label{instruction_8h_a7165747e4681d428fab1d229a2938288}} 
+\index{instruction.h@{instruction.h}!DIVB@{DIVB}}
+\index{DIVB@{DIVB}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{DIVB}{DIVB}}
+{\footnotesize\ttfamily \#define DIVB~0x7003u}
+
+\mbox{\Hypertarget{instruction_8h_aed631e16312ac2243fb4c38e487e7ba0}\label{instruction_8h_aed631e16312ac2243fb4c38e487e7ba0}} 
+\index{instruction.h@{instruction.h}!DIVF@{DIVF}}
+\index{DIVF@{DIVF}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{DIVF}{DIVF}}
+{\footnotesize\ttfamily \#define DIVF~0x8003u}
+
+\mbox{\Hypertarget{instruction_8h_a0ec0abb74473bb243f77d9fb7dc7a1f3}\label{instruction_8h_a0ec0abb74473bb243f77d9fb7dc7a1f3}} 
+\index{instruction.h@{instruction.h}!DIVW@{DIVW}}
+\index{DIVW@{DIVW}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{DIVW}{DIVW}}
+{\footnotesize\ttfamily \#define DIVW~0x6003u}
+
+\mbox{\Hypertarget{instruction_8h_a19ce640163f7a9d722dafa2459cac550}\label{instruction_8h_a19ce640163f7a9d722dafa2459cac550}} 
+\index{instruction.h@{instruction.h}!EMP@{EMP}}
+\index{EMP@{EMP}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{EMP}{EMP}}
+{\footnotesize\ttfamily \#define EMP~0x\+FFu}
+
+\mbox{\Hypertarget{instruction_8h_adf2a01fd380d9aa8618c131717ce7ecb}\label{instruction_8h_adf2a01fd380d9aa8618c131717ce7ecb}} 
+\index{instruction.h@{instruction.h}!FA@{FA}}
+\index{FA@{FA}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{FA}{FA}}
+{\footnotesize\ttfamily \#define FA~0x00000006u}
+
+\mbox{\Hypertarget{instruction_8h_afa56f653aa38688ca538ba26fcde993c}\label{instruction_8h_afa56f653aa38688ca538ba26fcde993c}} 
+\index{instruction.h@{instruction.h}!FB@{FB}}
+\index{FB@{FB}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{FB}{FB}}
+{\footnotesize\ttfamily \#define FB~0x00000007u}
+
+\mbox{\Hypertarget{instruction_8h_ad937567dd62f7f5abfa1724f07ae6094}\label{instruction_8h_ad937567dd62f7f5abfa1724f07ae6094}} 
+\index{instruction.h@{instruction.h}!FR@{FR}}
+\index{FR@{FR}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{FR}{FR}}
+{\footnotesize\ttfamily \#define FR~0x00000008u}
+
+\mbox{\Hypertarget{instruction_8h_a0de250395e6a7c0c32a34b50a6254c7d}\label{instruction_8h_a0de250395e6a7c0c32a34b50a6254c7d}} 
+\index{instruction.h@{instruction.h}!HALT@{HALT}}
+\index{HALT@{HALT}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{HALT}{HALT}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define HALT~0x\+FFFFu}
+
+\mbox{\Hypertarget{instruction_8h_a0de250395e6a7c0c32a34b50a6254c7d}\label{instruction_8h_a0de250395e6a7c0c32a34b50a6254c7d}} 
+\index{instruction.h@{instruction.h}!HALT@{HALT}}
+\index{HALT@{HALT}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{HALT}{HALT}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define HALT~0x\+FFFFu}
+
+\mbox{\Hypertarget{instruction_8h_af9861bac4261f2b4d31c93c1aee088da}\label{instruction_8h_af9861bac4261f2b4d31c93c1aee088da}} 
+\index{instruction.h@{instruction.h}!IMM@{IMM}}
+\index{IMM@{IMM}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{IMM}{IMM}}
+{\footnotesize\ttfamily \#define IMM~0x00u}
+
+\mbox{\Hypertarget{instruction_8h_af00e4b63d736381e1c527ac5ef2c8f3c}\label{instruction_8h_af00e4b63d736381e1c527ac5ef2c8f3c}} 
+\index{instruction.h@{instruction.h}!IP@{IP}}
+\index{IP@{IP}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{IP}{IP}}
+{\footnotesize\ttfamily \#define IP~0x00000000u}
+
+\mbox{\Hypertarget{instruction_8h_a61adf7b292d40bd77c0ee35cb9eb2597}\label{instruction_8h_a61adf7b292d40bd77c0ee35cb9eb2597}} 
+\index{instruction.h@{instruction.h}!JE@{JE}}
+\index{JE@{JE}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{JE}{JE}}
+{\footnotesize\ttfamily \#define JE~0x\+A003u}
+
+\mbox{\Hypertarget{instruction_8h_a9ce248f02cf5c3c33710a49269bb23ca}\label{instruction_8h_a9ce248f02cf5c3c33710a49269bb23ca}} 
+\index{instruction.h@{instruction.h}!JEG@{JEG}}
+\index{JEG@{JEG}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{JEG}{JEG}}
+{\footnotesize\ttfamily \#define JEG~0x\+A005u}
+
+\mbox{\Hypertarget{instruction_8h_a7d4c9f1ccd9a37d16e61f0f9e574bbc7}\label{instruction_8h_a7d4c9f1ccd9a37d16e61f0f9e574bbc7}} 
+\index{instruction.h@{instruction.h}!JEL@{JEL}}
+\index{JEL@{JEL}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{JEL}{JEL}}
+{\footnotesize\ttfamily \#define JEL~0x\+A006u}
+
+\mbox{\Hypertarget{instruction_8h_a0aadd52e0701b04b7d48ae42a29da802}\label{instruction_8h_a0aadd52e0701b04b7d48ae42a29da802}} 
+\index{instruction.h@{instruction.h}!JG@{JG}}
+\index{JG@{JG}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{JG}{JG}}
+{\footnotesize\ttfamily \#define JG~0x\+A001u}
+
+\mbox{\Hypertarget{instruction_8h_a07db26103640fbb48480d5066c995d46}\label{instruction_8h_a07db26103640fbb48480d5066c995d46}} 
+\index{instruction.h@{instruction.h}!JL@{JL}}
+\index{JL@{JL}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{JL}{JL}}
+{\footnotesize\ttfamily \#define JL~0x\+A002u}
+
+\mbox{\Hypertarget{instruction_8h_a35e1459a1f52ce4fc0834f47b408ee29}\label{instruction_8h_a35e1459a1f52ce4fc0834f47b408ee29}} 
+\index{instruction.h@{instruction.h}!JMP@{JMP}}
+\index{JMP@{JMP}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{JMP}{JMP}}
+{\footnotesize\ttfamily \#define JMP~0x\+A000u}
+
+\mbox{\Hypertarget{instruction_8h_a46cadd49a02da540cf99ad4adfc178e4}\label{instruction_8h_a46cadd49a02da540cf99ad4adfc178e4}} 
+\index{instruction.h@{instruction.h}!JNE@{JNE}}
+\index{JNE@{JNE}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{JNE}{JNE}}
+{\footnotesize\ttfamily \#define JNE~0x\+A004u}
+
+\mbox{\Hypertarget{instruction_8h_ab53e2578b9512e8a9cbf0083c31c9e9d}\label{instruction_8h_ab53e2578b9512e8a9cbf0083c31c9e9d}} 
+\index{instruction.h@{instruction.h}!JODD@{JODD}}
+\index{JODD@{JODD}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{JODD}{JODD}}
+{\footnotesize\ttfamily \#define JODD~0x\+A007u}
+
+\mbox{\Hypertarget{instruction_8h_a6f41e93c17a8a079a6e8776bef15eb8d}\label{instruction_8h_a6f41e93c17a8a079a6e8776bef15eb8d}} 
+\index{instruction.h@{instruction.h}!MAXREG@{MAXREG}}
+\index{MAXREG@{MAXREG}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{MAXREG}{MAXREG}}
+{\footnotesize\ttfamily \#define MAXREG~0x0000000\+Au}
+
+\mbox{\Hypertarget{instruction_8h_a249f4b957c983020b02c6c6376c47c6a}\label{instruction_8h_a249f4b957c983020b02c6c6376c47c6a}} 
+\index{instruction.h@{instruction.h}!MEM@{MEM}}
+\index{MEM@{MEM}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{MEM}{MEM}}
+{\footnotesize\ttfamily \#define MEM~0x10u}
+
+\mbox{\Hypertarget{instruction_8h_a83dd9cfbd1a7223ff60ba56ca6f09ed3}\label{instruction_8h_a83dd9cfbd1a7223ff60ba56ca6f09ed3}} 
+\index{instruction.h@{instruction.h}!MOV@{MOV}}
+\index{MOV@{MOV}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{MOV}{MOV}}
+{\footnotesize\ttfamily \#define MOV~0x\+E000u}
+
+\mbox{\Hypertarget{instruction_8h_a71db2fcf0467d41080c7d1309a41b388}\label{instruction_8h_a71db2fcf0467d41080c7d1309a41b388}} 
+\index{instruction.h@{instruction.h}!MULB@{MULB}}
+\index{MULB@{MULB}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{MULB}{MULB}}
+{\footnotesize\ttfamily \#define MULB~0x7002u}
+
+\mbox{\Hypertarget{instruction_8h_a96e450627addf5022d262e290e7cd89c}\label{instruction_8h_a96e450627addf5022d262e290e7cd89c}} 
+\index{instruction.h@{instruction.h}!MULF@{MULF}}
+\index{MULF@{MULF}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{MULF}{MULF}}
+{\footnotesize\ttfamily \#define MULF~0x8002u}
+
+\mbox{\Hypertarget{instruction_8h_a0d20f8734163f10d3093ea89511fdd86}\label{instruction_8h_a0d20f8734163f10d3093ea89511fdd86}} 
+\index{instruction.h@{instruction.h}!MULW@{MULW}}
+\index{MULW@{MULW}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{MULW}{MULW}}
+{\footnotesize\ttfamily \#define MULW~0x6002u}
+
+\mbox{\Hypertarget{instruction_8h_a0b06d6d6f5a540a62659a417de0ad69d}\label{instruction_8h_a0b06d6d6f5a540a62659a417de0ad69d}} 
+\index{instruction.h@{instruction.h}!POP@{POP}}
+\index{POP@{POP}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{POP}{POP}}
+{\footnotesize\ttfamily \#define POP~0x2000u}
+
+\mbox{\Hypertarget{instruction_8h_a431b92b32ec924789b2be268651a3fdd}\label{instruction_8h_a431b92b32ec924789b2be268651a3fdd}} 
+\index{instruction.h@{instruction.h}!PUSH@{PUSH}}
+\index{PUSH@{PUSH}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{PUSH}{PUSH}}
+{\footnotesize\ttfamily \#define PUSH~0x1000u}
+
+\mbox{\Hypertarget{instruction_8h_a30a3f049b718d26a32f16ed72716d588}\label{instruction_8h_a30a3f049b718d26a32f16ed72716d588}} 
+\index{instruction.h@{instruction.h}!RA@{RA}}
+\index{RA@{RA}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{RA}{RA}}
+{\footnotesize\ttfamily \#define RA~0x00000003u}
+
+\mbox{\Hypertarget{instruction_8h_a171160a766f85c8816b898ed24d28408}\label{instruction_8h_a171160a766f85c8816b898ed24d28408}} 
+\index{instruction.h@{instruction.h}!RB@{RB}}
+\index{RB@{RB}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{RB}{RB}}
+{\footnotesize\ttfamily \#define RB~0x00000004u}
+
+\mbox{\Hypertarget{instruction_8h_a32cd6ddf0512c1a66af27c304b8d6f8d}\label{instruction_8h_a32cd6ddf0512c1a66af27c304b8d6f8d}} 
+\index{instruction.h@{instruction.h}!READB@{READB}}
+\index{READB@{READB}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{READB}{READB}}
+{\footnotesize\ttfamily \#define READB~0x3001u}
+
+\mbox{\Hypertarget{instruction_8h_a22f9ee7e821638403edb5228991bb08b}\label{instruction_8h_a22f9ee7e821638403edb5228991bb08b}} 
+\index{instruction.h@{instruction.h}!READF@{READF}}
+\index{READF@{READF}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{READF}{READF}}
+{\footnotesize\ttfamily \#define READF~0x3002u}
+
+\mbox{\Hypertarget{instruction_8h_a776bc71647ab698d7e0a74ab1ee75846}\label{instruction_8h_a776bc71647ab698d7e0a74ab1ee75846}} 
+\index{instruction.h@{instruction.h}!READW@{READW}}
+\index{READW@{READW}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{READW}{READW}}
+{\footnotesize\ttfamily \#define READW~0x3000u}
+
+\mbox{\Hypertarget{instruction_8h_ac12997fa537ec8cbf0f69bf8228cc2a0}\label{instruction_8h_ac12997fa537ec8cbf0f69bf8228cc2a0}} 
+\index{instruction.h@{instruction.h}!REG@{REG}}
+\index{REG@{REG}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{REG}{REG}}
+{\footnotesize\ttfamily \#define REG~0x01u}
+
+\mbox{\Hypertarget{instruction_8h_ac2544c8b4fe3113b0d6bb62530692c21}\label{instruction_8h_ac2544c8b4fe3113b0d6bb62530692c21}} 
+\index{instruction.h@{instruction.h}!RET@{RET}}
+\index{RET@{RET}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{RET}{RET}}
+{\footnotesize\ttfamily \#define RET~0x\+FF01u}
+
+\mbox{\Hypertarget{instruction_8h_a63979cf6054f403eab1d354e6dcc4ce9}\label{instruction_8h_a63979cf6054f403eab1d354e6dcc4ce9}} 
+\index{instruction.h@{instruction.h}!RR@{RR}}
+\index{RR@{RR}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{RR}{RR}}
+{\footnotesize\ttfamily \#define RR~0x00000005u}
+
+\mbox{\Hypertarget{instruction_8h_a6caf03c3bd2a5c38311029687b07c441}\label{instruction_8h_a6caf03c3bd2a5c38311029687b07c441}} 
+\index{instruction.h@{instruction.h}!SEG@{SEG}}
+\index{SEG@{SEG}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{SEG}{SEG}}
+{\footnotesize\ttfamily \#define SEG~0x11u}
+
+\mbox{\Hypertarget{instruction_8h_aecd69d9a67487cc45c38eb184c50538a}\label{instruction_8h_aecd69d9a67487cc45c38eb184c50538a}} 
+\index{instruction.h@{instruction.h}!SP@{SP}}
+\index{SP@{SP}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{SP}{SP}}
+{\footnotesize\ttfamily \#define SP~0x00000002u}
+
+\mbox{\Hypertarget{instruction_8h_abaed93a16a0cde13f32bc4dc48b96804}\label{instruction_8h_abaed93a16a0cde13f32bc4dc48b96804}} 
+\index{instruction.h@{instruction.h}!SR@{SR}}
+\index{SR@{SR}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{SR}{SR}}
+{\footnotesize\ttfamily \#define SR~0x00000009u}
+
+\mbox{\Hypertarget{instruction_8h_a6c5cac30b87d19f4274439a66943f7f1}\label{instruction_8h_a6c5cac30b87d19f4274439a66943f7f1}} 
+\index{instruction.h@{instruction.h}!SUBB@{SUBB}}
+\index{SUBB@{SUBB}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{SUBB}{SUBB}}
+{\footnotesize\ttfamily \#define SUBB~0x7001u}
+
+\mbox{\Hypertarget{instruction_8h_a996933f06731f18612b4783b99f8b457}\label{instruction_8h_a996933f06731f18612b4783b99f8b457}} 
+\index{instruction.h@{instruction.h}!SUBF@{SUBF}}
+\index{SUBF@{SUBF}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{SUBF}{SUBF}}
+{\footnotesize\ttfamily \#define SUBF~0x8001u}
+
+\mbox{\Hypertarget{instruction_8h_a2d11cb05279d5d2538d4d864e22b7d0b}\label{instruction_8h_a2d11cb05279d5d2538d4d864e22b7d0b}} 
+\index{instruction.h@{instruction.h}!SUBW@{SUBW}}
+\index{SUBW@{SUBW}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{SUBW}{SUBW}}
+{\footnotesize\ttfamily \#define SUBW~0x6001u}
+
+\mbox{\Hypertarget{instruction_8h_addcd204eb15a640ac18a8675c1f8366a}\label{instruction_8h_addcd204eb15a640ac18a8675c1f8366a}} 
+\index{instruction.h@{instruction.h}!WRITEB@{WRITEB}}
+\index{WRITEB@{WRITEB}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{WRITEB}{WRITEB}}
+{\footnotesize\ttfamily \#define WRITEB~0x4001u}
+
+\mbox{\Hypertarget{instruction_8h_a057f52b2594ef1bdd458be4b7f371e51}\label{instruction_8h_a057f52b2594ef1bdd458be4b7f371e51}} 
+\index{instruction.h@{instruction.h}!WRITEF@{WRITEF}}
+\index{WRITEF@{WRITEF}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{WRITEF}{WRITEF}}
+{\footnotesize\ttfamily \#define WRITEF~0x4002u}
+
+\mbox{\Hypertarget{instruction_8h_aa35e5661701ee9468292e7638034876c}\label{instruction_8h_aa35e5661701ee9468292e7638034876c}} 
+\index{instruction.h@{instruction.h}!WRITEW@{WRITEW}}
+\index{WRITEW@{WRITEW}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{WRITEW}{WRITEW}}
+{\footnotesize\ttfamily \#define WRITEW~0x4000u}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}\label{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}} 
+\index{instruction.h@{instruction.h}!WORD@{WORD}}
+\index{WORD@{WORD}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{WORD}{WORD}}
+{\footnotesize\ttfamily typedef unsigned int \mbox{\hyperlink{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}{WORD}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{instruction_8h_a2acd7bca9ba0dc1c7052cc3b7c64d152}\label{instruction_8h_a2acd7bca9ba0dc1c7052cc3b7c64d152}} 
+\index{instruction.h@{instruction.h}!char\_to\_word@{char\_to\_word}}
+\index{char\_to\_word@{char\_to\_word}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{char\_to\_word()}{char\_to\_word()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}{WORD}} char\+\_\+to\+\_\+word (\begin{DoxyParamCaption}\item[{char}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{instruction_8h_a27947e67e0e183ee00c86a47c4c41be0}\label{instruction_8h_a27947e67e0e183ee00c86a47c4c41be0}} 
+\index{instruction.h@{instruction.h}!float\_to\_word@{float\_to\_word}}
+\index{float\_to\_word@{float\_to\_word}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{float\_to\_word()}{float\_to\_word()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}{WORD}} float\+\_\+to\+\_\+word (\begin{DoxyParamCaption}\item[{char}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{instruction_8h_a07f0467f63d71780cc72e7ac9c680005}\label{instruction_8h_a07f0467f63d71780cc72e7ac9c680005}} 
+\index{instruction.h@{instruction.h}!int\_to\_word@{int\_to\_word}}
+\index{int\_to\_word@{int\_to\_word}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{int\_to\_word()}{int\_to\_word()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}{WORD}} int\+\_\+to\+\_\+word (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{instruction_8h_a3e650032e5eb783fae4c62ec516b6afd}\label{instruction_8h_a3e650032e5eb783fae4c62ec516b6afd}} 
+\index{instruction.h@{instruction.h}!prepare\_inst@{prepare\_inst}}
+\index{prepare\_inst@{prepare\_inst}!instruction.h@{instruction.h}}
+\doxysubsubsection{\texorpdfstring{prepare\_inst()}{prepare\_inst()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}{WORD}} prepare\+\_\+inst (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}{WORD}}}]{opcode,  }\item[{\mbox{\hyperlink{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}{WORD}}}]{op1,  }\item[{\mbox{\hyperlink{instruction_8h_ad2baa11c897721ff6f14b452b547f9bc}{WORD}}}]{op2 }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{instruction_8h_a3e650032e5eb783fae4c62ec516b6afd_icgraph}
+\end{center}
+\end{figure}

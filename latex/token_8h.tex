@@ -1,0 +1,110 @@
+\hypertarget{token_8h}{}\doxysection{token/token.h File Reference}
+\label{token_8h}\index{token/token.h@{token/token.h}}
+{\ttfamily \#include \char`\"{}stream/input\+\_\+stream.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$any$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+Include dependency graph for token.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{token_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{token_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classToken}{Token}}
+\item 
+class \mbox{\hyperlink{classAbstractTokenParser}{Abstract\+Token\+Parser}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{token_8h_ac56688eb3bf712d7b7e01f7e06015039}{Token\+Type}} \+: unsigned char \{ \newline
+\mbox{\hyperlink{token_8h_ac56688eb3bf712d7b7e01f7e06015039a8a86f71ecaa6455516a278ee20cca735}{EOT}}
+, \mbox{\hyperlink{token_8h_ac56688eb3bf712d7b7e01f7e06015039accc0377a8afbf50e7094f5c23a8af223}{INVALID}}
+, \mbox{\hyperlink{token_8h_ac56688eb3bf712d7b7e01f7e06015039a6d0c9fc747131795e6e5d0c5119f12cb}{VOID}}
+, \mbox{\hyperlink{token_8h_ac56688eb3bf712d7b7e01f7e06015039a6fcc416051346daca31c571646af127a}{IDENTIFIER}}
+, \newline
+\mbox{\hyperlink{token_8h_ac56688eb3bf712d7b7e01f7e06015039a780bc0722dd01d4a8d9869f060734be6}{KEYWORD}}
+, \mbox{\hyperlink{token_8h_ac56688eb3bf712d7b7e01f7e06015039a34f55eca38e0605a84f169ff61a2a396}{NUMBER}}
+, \mbox{\hyperlink{token_8h_ac56688eb3bf712d7b7e01f7e06015039a986496ca5b23669b8661171566a167c3}{OPERATOR}}
+, \mbox{\hyperlink{token_8h_ac56688eb3bf712d7b7e01f7e06015039a8fc5a0642a90632e8418ca52c3ec761d}{SYMBOL}}
+, \newline
+\mbox{\hyperlink{token_8h_ac56688eb3bf712d7b7e01f7e06015039a027acd3aa6b1dd7f26119d3cf0f9a063}{CHAR}}
+, \mbox{\hyperlink{token_8h_ac56688eb3bf712d7b7e01f7e06015039a63b588d5559f64f89a416e656880b949}{STRING}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{token_8h_a48bc477798a2d6b19818a83ed8519ceb}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{token_8h_ac56688eb3bf712d7b7e01f7e06015039}{Token\+Type}} \&token\+Type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{token_8h_ac56688eb3bf712d7b7e01f7e06015039}\label{token_8h_ac56688eb3bf712d7b7e01f7e06015039}} 
+\index{token.h@{token.h}!TokenType@{TokenType}}
+\index{TokenType@{TokenType}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{TokenType}{TokenType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{token_8h_ac56688eb3bf712d7b7e01f7e06015039}{Token\+Type}} \+: unsigned char\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EOT@{EOT}!token.h@{token.h}}\index{token.h@{token.h}!EOT@{EOT}}}\mbox{\Hypertarget{token_8h_ac56688eb3bf712d7b7e01f7e06015039a8a86f71ecaa6455516a278ee20cca735}\label{token_8h_ac56688eb3bf712d7b7e01f7e06015039a8a86f71ecaa6455516a278ee20cca735}} 
+EOT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INVALID@{INVALID}!token.h@{token.h}}\index{token.h@{token.h}!INVALID@{INVALID}}}\mbox{\Hypertarget{token_8h_ac56688eb3bf712d7b7e01f7e06015039accc0377a8afbf50e7094f5c23a8af223}\label{token_8h_ac56688eb3bf712d7b7e01f7e06015039accc0377a8afbf50e7094f5c23a8af223}} 
+INVALID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VOID@{VOID}!token.h@{token.h}}\index{token.h@{token.h}!VOID@{VOID}}}\mbox{\Hypertarget{token_8h_ac56688eb3bf712d7b7e01f7e06015039a6d0c9fc747131795e6e5d0c5119f12cb}\label{token_8h_ac56688eb3bf712d7b7e01f7e06015039a6d0c9fc747131795e6e5d0c5119f12cb}} 
+VOID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IDENTIFIER@{IDENTIFIER}!token.h@{token.h}}\index{token.h@{token.h}!IDENTIFIER@{IDENTIFIER}}}\mbox{\Hypertarget{token_8h_ac56688eb3bf712d7b7e01f7e06015039a6fcc416051346daca31c571646af127a}\label{token_8h_ac56688eb3bf712d7b7e01f7e06015039a6fcc416051346daca31c571646af127a}} 
+IDENTIFIER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEYWORD@{KEYWORD}!token.h@{token.h}}\index{token.h@{token.h}!KEYWORD@{KEYWORD}}}\mbox{\Hypertarget{token_8h_ac56688eb3bf712d7b7e01f7e06015039a780bc0722dd01d4a8d9869f060734be6}\label{token_8h_ac56688eb3bf712d7b7e01f7e06015039a780bc0722dd01d4a8d9869f060734be6}} 
+KEYWORD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUMBER@{NUMBER}!token.h@{token.h}}\index{token.h@{token.h}!NUMBER@{NUMBER}}}\mbox{\Hypertarget{token_8h_ac56688eb3bf712d7b7e01f7e06015039a34f55eca38e0605a84f169ff61a2a396}\label{token_8h_ac56688eb3bf712d7b7e01f7e06015039a34f55eca38e0605a84f169ff61a2a396}} 
+NUMBER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OPERATOR@{OPERATOR}!token.h@{token.h}}\index{token.h@{token.h}!OPERATOR@{OPERATOR}}}\mbox{\Hypertarget{token_8h_ac56688eb3bf712d7b7e01f7e06015039a986496ca5b23669b8661171566a167c3}\label{token_8h_ac56688eb3bf712d7b7e01f7e06015039a986496ca5b23669b8661171566a167c3}} 
+OPERATOR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SYMBOL@{SYMBOL}!token.h@{token.h}}\index{token.h@{token.h}!SYMBOL@{SYMBOL}}}\mbox{\Hypertarget{token_8h_ac56688eb3bf712d7b7e01f7e06015039a8fc5a0642a90632e8418ca52c3ec761d}\label{token_8h_ac56688eb3bf712d7b7e01f7e06015039a8fc5a0642a90632e8418ca52c3ec761d}} 
+SYMBOL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHAR@{CHAR}!token.h@{token.h}}\index{token.h@{token.h}!CHAR@{CHAR}}}\mbox{\Hypertarget{token_8h_ac56688eb3bf712d7b7e01f7e06015039a027acd3aa6b1dd7f26119d3cf0f9a063}\label{token_8h_ac56688eb3bf712d7b7e01f7e06015039a027acd3aa6b1dd7f26119d3cf0f9a063}} 
+CHAR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STRING@{STRING}!token.h@{token.h}}\index{token.h@{token.h}!STRING@{STRING}}}\mbox{\Hypertarget{token_8h_ac56688eb3bf712d7b7e01f7e06015039a63b588d5559f64f89a416e656880b949}\label{token_8h_ac56688eb3bf712d7b7e01f7e06015039a63b588d5559f64f89a416e656880b949}} 
+STRING&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{token_8h_a48bc477798a2d6b19818a83ed8519ceb}\label{token_8h_a48bc477798a2d6b19818a83ed8519ceb}} 
+\index{token.h@{token.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!token.h@{token.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{token_8h_ac56688eb3bf712d7b7e01f7e06015039}{Token\+Type}} \&}]{token\+Type }\end{DoxyParamCaption})}
+

@@ -1,0 +1,173 @@
+\hypertarget{semantic_2statement_8h}{}\doxysection{semantic/statement.h File Reference}
+\label{semantic_2statement_8h}\index{semantic/statement.h@{semantic/statement.h}}
+{\ttfamily \#include \char`\"{}stream/token\+\_\+stream.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$any$>$}\newline
+Include dependency graph for statement.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{semantic_2statement_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{semantic_2statement_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structPLStatement}{PLStatement}}
+\item 
+class \mbox{\hyperlink{classPLStatementParser}{PLStatement\+Parser}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774}{PLStatement\+Action}} \+: unsigned char \{ \newline
+\mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774accc0377a8afbf50e7094f5c23a8af223}{INVALID}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a6d0c9fc747131795e6e5d0c5119f12cb}{VOID}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774ad3428ee9afeb947b67aa37e634148ee5}{EOS}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aea8ec660a4ff1a0cf378ac911be7efb2}{EXPRESSION}}
+, \newline
+\mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aa9a1a7e9fb1541cadc1259b94cdbe754}{CONSTDECLARE}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774ab80a4aaf58df0a59b3365c53a669b65a}{VARDECLARE}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a9afc5d67c3381e033abf50bacf3449a9}{STRUCTDECLARE}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aedd1b0e21f17c9d86863f51f0697b175}{TYPEDECLARE}}
+, \newline
+\mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a7f7c542e9936ba6225b48d2658b75ad0}{FUNCDECLARE}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a05c31152d33d28330bfd6cdfb5ee36e2}{IFELSE}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a1263d81be6ad2c25e7fc168bd9c97a54}{FORLOOP}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a5e8acb55179f115abd8a9612f470a73a}{WHILELOOP}}
+, \newline
+\mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774ae0682fa6aed35a38e909c0ca5d6a8177}{DOWHILELOOP}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774affd6976a2b4f6934eb075d0013316ff1}{ASSIGN}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aea8ec660a4ff1a0cf378ac911be7efb2}{EXPRESSION}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aa9a1a7e9fb1541cadc1259b94cdbe754}{CONSTDECLARE}}
+, \newline
+\mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774ab80a4aaf58df0a59b3365c53a669b65a}{VARDECLARE}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a9afc5d67c3381e033abf50bacf3449a9}{STRUCTDECLARE}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aedd1b0e21f17c9d86863f51f0697b175}{TYPEDECLARE}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a7f7c542e9936ba6225b48d2658b75ad0}{FUNCDECLARE}}
+, \newline
+\mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a05c31152d33d28330bfd6cdfb5ee36e2}{IFELSE}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a1263d81be6ad2c25e7fc168bd9c97a54}{FORLOOP}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a5e8acb55179f115abd8a9612f470a73a}{WHILELOOP}}
+, \mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774ae0682fa6aed35a38e909c0ca5d6a8177}{DOWHILELOOP}}
+, \newline
+\mbox{\hyperlink{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774affd6976a2b4f6934eb075d0013316ff1}{ASSIGN}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774}} 
+\index{statement.h@{statement.h}!PLStatementAction@{PLStatementAction}}
+\index{PLStatementAction@{PLStatementAction}!statement.h@{statement.h}}
+\doxysubsubsection{\texorpdfstring{PLStatementAction}{PLStatementAction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{parser_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774}{PLStatement\+Action}} \+: unsigned char\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INVALID@{INVALID}!statement.h@{statement.h}}\index{statement.h@{statement.h}!INVALID@{INVALID}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774accc0377a8afbf50e7094f5c23a8af223}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774accc0377a8afbf50e7094f5c23a8af223}} 
+INVALID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VOID@{VOID}!statement.h@{statement.h}}\index{statement.h@{statement.h}!VOID@{VOID}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a6d0c9fc747131795e6e5d0c5119f12cb}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a6d0c9fc747131795e6e5d0c5119f12cb}} 
+VOID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EOS@{EOS}!statement.h@{statement.h}}\index{statement.h@{statement.h}!EOS@{EOS}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774ad3428ee9afeb947b67aa37e634148ee5}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774ad3428ee9afeb947b67aa37e634148ee5}} 
+EOS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXPRESSION@{EXPRESSION}!statement.h@{statement.h}}\index{statement.h@{statement.h}!EXPRESSION@{EXPRESSION}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aea8ec660a4ff1a0cf378ac911be7efb2}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aea8ec660a4ff1a0cf378ac911be7efb2}} 
+EXPRESSION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONSTDECLARE@{CONSTDECLARE}!statement.h@{statement.h}}\index{statement.h@{statement.h}!CONSTDECLARE@{CONSTDECLARE}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aa9a1a7e9fb1541cadc1259b94cdbe754}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aa9a1a7e9fb1541cadc1259b94cdbe754}} 
+CONSTDECLARE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VARDECLARE@{VARDECLARE}!statement.h@{statement.h}}\index{statement.h@{statement.h}!VARDECLARE@{VARDECLARE}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774ab80a4aaf58df0a59b3365c53a669b65a}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774ab80a4aaf58df0a59b3365c53a669b65a}} 
+VARDECLARE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STRUCTDECLARE@{STRUCTDECLARE}!statement.h@{statement.h}}\index{statement.h@{statement.h}!STRUCTDECLARE@{STRUCTDECLARE}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a9afc5d67c3381e033abf50bacf3449a9}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a9afc5d67c3381e033abf50bacf3449a9}} 
+STRUCTDECLARE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TYPEDECLARE@{TYPEDECLARE}!statement.h@{statement.h}}\index{statement.h@{statement.h}!TYPEDECLARE@{TYPEDECLARE}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aedd1b0e21f17c9d86863f51f0697b175}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aedd1b0e21f17c9d86863f51f0697b175}} 
+TYPEDECLARE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FUNCDECLARE@{FUNCDECLARE}!statement.h@{statement.h}}\index{statement.h@{statement.h}!FUNCDECLARE@{FUNCDECLARE}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a7f7c542e9936ba6225b48d2658b75ad0}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a7f7c542e9936ba6225b48d2658b75ad0}} 
+FUNCDECLARE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IFELSE@{IFELSE}!statement.h@{statement.h}}\index{statement.h@{statement.h}!IFELSE@{IFELSE}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a05c31152d33d28330bfd6cdfb5ee36e2}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a05c31152d33d28330bfd6cdfb5ee36e2}} 
+IFELSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FORLOOP@{FORLOOP}!statement.h@{statement.h}}\index{statement.h@{statement.h}!FORLOOP@{FORLOOP}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a1263d81be6ad2c25e7fc168bd9c97a54}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a1263d81be6ad2c25e7fc168bd9c97a54}} 
+FORLOOP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WHILELOOP@{WHILELOOP}!statement.h@{statement.h}}\index{statement.h@{statement.h}!WHILELOOP@{WHILELOOP}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a5e8acb55179f115abd8a9612f470a73a}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a5e8acb55179f115abd8a9612f470a73a}} 
+WHILELOOP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOWHILELOOP@{DOWHILELOOP}!statement.h@{statement.h}}\index{statement.h@{statement.h}!DOWHILELOOP@{DOWHILELOOP}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774ae0682fa6aed35a38e909c0ca5d6a8177}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774ae0682fa6aed35a38e909c0ca5d6a8177}} 
+DOWHILELOOP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ASSIGN@{ASSIGN}!statement.h@{statement.h}}\index{statement.h@{statement.h}!ASSIGN@{ASSIGN}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774affd6976a2b4f6934eb075d0013316ff1}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774affd6976a2b4f6934eb075d0013316ff1}} 
+ASSIGN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXPRESSION@{EXPRESSION}!statement.h@{statement.h}}\index{statement.h@{statement.h}!EXPRESSION@{EXPRESSION}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aea8ec660a4ff1a0cf378ac911be7efb2}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aea8ec660a4ff1a0cf378ac911be7efb2}} 
+EXPRESSION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONSTDECLARE@{CONSTDECLARE}!statement.h@{statement.h}}\index{statement.h@{statement.h}!CONSTDECLARE@{CONSTDECLARE}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aa9a1a7e9fb1541cadc1259b94cdbe754}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aa9a1a7e9fb1541cadc1259b94cdbe754}} 
+CONSTDECLARE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VARDECLARE@{VARDECLARE}!statement.h@{statement.h}}\index{statement.h@{statement.h}!VARDECLARE@{VARDECLARE}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774ab80a4aaf58df0a59b3365c53a669b65a}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774ab80a4aaf58df0a59b3365c53a669b65a}} 
+VARDECLARE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STRUCTDECLARE@{STRUCTDECLARE}!statement.h@{statement.h}}\index{statement.h@{statement.h}!STRUCTDECLARE@{STRUCTDECLARE}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a9afc5d67c3381e033abf50bacf3449a9}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a9afc5d67c3381e033abf50bacf3449a9}} 
+STRUCTDECLARE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TYPEDECLARE@{TYPEDECLARE}!statement.h@{statement.h}}\index{statement.h@{statement.h}!TYPEDECLARE@{TYPEDECLARE}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aedd1b0e21f17c9d86863f51f0697b175}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774aedd1b0e21f17c9d86863f51f0697b175}} 
+TYPEDECLARE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FUNCDECLARE@{FUNCDECLARE}!statement.h@{statement.h}}\index{statement.h@{statement.h}!FUNCDECLARE@{FUNCDECLARE}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a7f7c542e9936ba6225b48d2658b75ad0}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a7f7c542e9936ba6225b48d2658b75ad0}} 
+FUNCDECLARE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IFELSE@{IFELSE}!statement.h@{statement.h}}\index{statement.h@{statement.h}!IFELSE@{IFELSE}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a05c31152d33d28330bfd6cdfb5ee36e2}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a05c31152d33d28330bfd6cdfb5ee36e2}} 
+IFELSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FORLOOP@{FORLOOP}!statement.h@{statement.h}}\index{statement.h@{statement.h}!FORLOOP@{FORLOOP}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a1263d81be6ad2c25e7fc168bd9c97a54}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a1263d81be6ad2c25e7fc168bd9c97a54}} 
+FORLOOP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WHILELOOP@{WHILELOOP}!statement.h@{statement.h}}\index{statement.h@{statement.h}!WHILELOOP@{WHILELOOP}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a5e8acb55179f115abd8a9612f470a73a}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774a5e8acb55179f115abd8a9612f470a73a}} 
+WHILELOOP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOWHILELOOP@{DOWHILELOOP}!statement.h@{statement.h}}\index{statement.h@{statement.h}!DOWHILELOOP@{DOWHILELOOP}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774ae0682fa6aed35a38e909c0ca5d6a8177}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774ae0682fa6aed35a38e909c0ca5d6a8177}} 
+DOWHILELOOP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ASSIGN@{ASSIGN}!statement.h@{statement.h}}\index{statement.h@{statement.h}!ASSIGN@{ASSIGN}}}\mbox{\Hypertarget{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774affd6976a2b4f6934eb075d0013316ff1}\label{semantic_2statement_8h_adf68099ee58818ed8c46eac3ca7bc774affd6976a2b4f6934eb075d0013316ff1}} 
+ASSIGN&\\
+\hline
+
+\end{DoxyEnumFields}

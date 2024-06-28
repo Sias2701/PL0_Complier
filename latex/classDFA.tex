@@ -1,0 +1,181 @@
+\hypertarget{classDFA}{}\doxysection{DFA Class Reference}
+\label{classDFA}\index{DFA@{DFA}}
+
+
+{\ttfamily \#include $<$dfa.\+h$>$}
+
+
+
+Inheritance diagram for DFA\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDFA__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for DFA\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classDFA__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structDFA_1_1pair__hash}{pair\+\_\+hash}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDFA_af7eba16ecb36c0fd838d1a09e8ee7bef}{DFA}} ()=default
+\item 
+\mbox{\hyperlink{classDFA_af89326b94763fd30a54cf198810bb28e}{$\sim$\+DFA}} ()=default
+\item 
+virtual \mbox{\hyperlink{classToken}{Token}} \mbox{\hyperlink{classDFA_a9044809425ea1333342950b89e974bc9}{parse}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInputStream}{Input\+Stream}} $>$ stream)
+\item 
+void \mbox{\hyperlink{classDFA_aa2ee97a6efcca5e9da2c3636d83ab2b8}{reset}} ()
+\item 
+bool \mbox{\hyperlink{classDFA_a202a404f428123738e29f244d0097607}{check\+\_\+first}} (char symbol)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classDFA_a08ae831f62caef0347e530b5b4c78efc}{\+\_\+add\+\_\+transition}} (int \mbox{\hyperlink{classDFA_a6c461db934c85efd4f10f126c6b1d776}{start\+\_\+state}}, char symbol, int end\+\_\+state)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+set$<$ int $>$ \mbox{\hyperlink{classDFA_a148b50eb10bcdabe9bd5d3f3fca3bf72}{states}}
+\item 
+std\+::unordered\+\_\+set$<$ char $>$ \mbox{\hyperlink{classDFA_ae25329d7a4f1e29ca85ed4e695b60749}{alphabet}}
+\item 
+std\+::unordered\+\_\+set$<$ char $>$ \mbox{\hyperlink{classDFA_ad591223dcab46d3693d63d7faaed5049}{first}}
+\item 
+std\+::unordered\+\_\+set$<$ int $>$ \mbox{\hyperlink{classDFA_a2535f2f1779544d5eff8cf7b2c535fd5}{accept\+\_\+states}}
+\item 
+int \mbox{\hyperlink{classDFA_a6c461db934c85efd4f10f126c6b1d776}{start\+\_\+state}}
+\item 
+int \mbox{\hyperlink{classDFA_a14d714d92cd06f6fe28266a7b7d1a954}{current\+\_\+state}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::pair$<$ int, char $>$, int, \mbox{\hyperlink{structDFA_1_1pair__hash}{pair\+\_\+hash}} $>$ \mbox{\hyperlink{classDFA_a9270141c4a3115f796251223173796df}{transitions}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDFA_af7eba16ecb36c0fd838d1a09e8ee7bef}\label{classDFA_af7eba16ecb36c0fd838d1a09e8ee7bef}} 
+\index{DFA@{DFA}!DFA@{DFA}}
+\index{DFA@{DFA}!DFA@{DFA}}
+\doxysubsubsection{\texorpdfstring{DFA()}{DFA()}}
+{\footnotesize\ttfamily DFA\+::\+DFA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classDFA_af89326b94763fd30a54cf198810bb28e}\label{classDFA_af89326b94763fd30a54cf198810bb28e}} 
+\index{DFA@{DFA}!````~DFA@{$\sim$DFA}}
+\index{````~DFA@{$\sim$DFA}!DFA@{DFA}}
+\doxysubsubsection{\texorpdfstring{$\sim$DFA()}{~DFA()}}
+{\footnotesize\ttfamily DFA\+::$\sim$\+DFA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDFA_a08ae831f62caef0347e530b5b4c78efc}\label{classDFA_a08ae831f62caef0347e530b5b4c78efc}} 
+\index{DFA@{DFA}!\_add\_transition@{\_add\_transition}}
+\index{\_add\_transition@{\_add\_transition}!DFA@{DFA}}
+\doxysubsubsection{\texorpdfstring{\_add\_transition()}{\_add\_transition()}}
+{\footnotesize\ttfamily void DFA\+::\+\_\+add\+\_\+transition (\begin{DoxyParamCaption}\item[{int}]{start\+\_\+state,  }\item[{char}]{symbol,  }\item[{int}]{end\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDFA_a08ae831f62caef0347e530b5b4c78efc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDFA_a202a404f428123738e29f244d0097607}\label{classDFA_a202a404f428123738e29f244d0097607}} 
+\index{DFA@{DFA}!check\_first@{check\_first}}
+\index{check\_first@{check\_first}!DFA@{DFA}}
+\doxysubsubsection{\texorpdfstring{check\_first()}{check\_first()}}
+{\footnotesize\ttfamily bool DFA\+::check\+\_\+first (\begin{DoxyParamCaption}\item[{char}]{symbol }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classDFA_a9044809425ea1333342950b89e974bc9}\label{classDFA_a9044809425ea1333342950b89e974bc9}} 
+\index{DFA@{DFA}!parse@{parse}}
+\index{parse@{parse}!DFA@{DFA}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classToken}{Token}} DFA\+::parse (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classInputStream}{Input\+Stream}} $>$}]{stream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classAbstractTokenParser_a1a71b07a7e87e252deeeb7a091662385}{Abstract\+Token\+Parser}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classNumberParser_a214df3c4ccf11919dec73dbb783d3223}{Number\+Parser}}, \mbox{\hyperlink{classIdentifierParser_abd00b1511a94e7102d2da2bc3787b7b7}{Identifier\+Parser}}, and \mbox{\hyperlink{classCharStrParser_a2087d3c20e2bb03bfe62f021d420b0aa}{Char\+Str\+Parser}}.
+
+\mbox{\Hypertarget{classDFA_aa2ee97a6efcca5e9da2c3636d83ab2b8}\label{classDFA_aa2ee97a6efcca5e9da2c3636d83ab2b8}} 
+\index{DFA@{DFA}!reset@{reset}}
+\index{reset@{reset}!DFA@{DFA}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void DFA\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDFA_aa2ee97a6efcca5e9da2c3636d83ab2b8_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classDFA_a2535f2f1779544d5eff8cf7b2c535fd5}\label{classDFA_a2535f2f1779544d5eff8cf7b2c535fd5}} 
+\index{DFA@{DFA}!accept\_states@{accept\_states}}
+\index{accept\_states@{accept\_states}!DFA@{DFA}}
+\doxysubsubsection{\texorpdfstring{accept\_states}{accept\_states}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+set$<$int$>$ DFA\+::accept\+\_\+states\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classDFA_ae25329d7a4f1e29ca85ed4e695b60749}\label{classDFA_ae25329d7a4f1e29ca85ed4e695b60749}} 
+\index{DFA@{DFA}!alphabet@{alphabet}}
+\index{alphabet@{alphabet}!DFA@{DFA}}
+\doxysubsubsection{\texorpdfstring{alphabet}{alphabet}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+set$<$char$>$ DFA\+::alphabet\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classDFA_a14d714d92cd06f6fe28266a7b7d1a954}\label{classDFA_a14d714d92cd06f6fe28266a7b7d1a954}} 
+\index{DFA@{DFA}!current\_state@{current\_state}}
+\index{current\_state@{current\_state}!DFA@{DFA}}
+\doxysubsubsection{\texorpdfstring{current\_state}{current\_state}}
+{\footnotesize\ttfamily int DFA\+::current\+\_\+state\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classDFA_ad591223dcab46d3693d63d7faaed5049}\label{classDFA_ad591223dcab46d3693d63d7faaed5049}} 
+\index{DFA@{DFA}!first@{first}}
+\index{first@{first}!DFA@{DFA}}
+\doxysubsubsection{\texorpdfstring{first}{first}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+set$<$char$>$ DFA\+::first\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classDFA_a6c461db934c85efd4f10f126c6b1d776}\label{classDFA_a6c461db934c85efd4f10f126c6b1d776}} 
+\index{DFA@{DFA}!start\_state@{start\_state}}
+\index{start\_state@{start\_state}!DFA@{DFA}}
+\doxysubsubsection{\texorpdfstring{start\_state}{start\_state}}
+{\footnotesize\ttfamily int DFA\+::start\+\_\+state\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classDFA_a148b50eb10bcdabe9bd5d3f3fca3bf72}\label{classDFA_a148b50eb10bcdabe9bd5d3f3fca3bf72}} 
+\index{DFA@{DFA}!states@{states}}
+\index{states@{states}!DFA@{DFA}}
+\doxysubsubsection{\texorpdfstring{states}{states}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+set$<$int$>$ DFA\+::states\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classDFA_a9270141c4a3115f796251223173796df}\label{classDFA_a9270141c4a3115f796251223173796df}} 
+\index{DFA@{DFA}!transitions@{transitions}}
+\index{transitions@{transitions}!DFA@{DFA}}
+\doxysubsubsection{\texorpdfstring{transitions}{transitions}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::pair$<$int, char$>$, int, \mbox{\hyperlink{structDFA_1_1pair__hash}{pair\+\_\+hash}}$>$ DFA\+::transitions\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+token/\mbox{\hyperlink{dfa_8h}{dfa.\+h}}\item 
+token/\mbox{\hyperlink{dfa_8cpp}{dfa.\+cpp}}\end{DoxyCompactItemize}

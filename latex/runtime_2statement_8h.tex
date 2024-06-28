@@ -1,0 +1,118 @@
+\hypertarget{runtime_2statement_8h}{}\doxysection{runtime/statement.h File Reference}
+\label{runtime_2statement_8h}\index{runtime/statement.h@{runtime/statement.h}}
+{\ttfamily \#include $<$any$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include \char`\"{}stream/token\+\_\+stream.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}parser/expression.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}parser/condition\+\_\+factor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vm/instruction.\+h\char`\"{}}\newline
+Include dependency graph for statement.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{runtime_2statement_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{runtime_2statement_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structPLFunctionContext}{PLFunction\+Context}}
+\item 
+struct \mbox{\hyperlink{structPLObjectContext}{PLObject\+Context}}
+\item 
+struct \mbox{\hyperlink{classPLObjectTable}{PLObject\+Table}}
+\item 
+class \mbox{\hyperlink{classPLStatementParser}{PLStatement\+Parser}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88}{PLStatement\+Type}} \+: unsigned char \{ \newline
+\mbox{\hyperlink{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a9207eb5abdcf3cc9e1deb8a9f93836a8}{CONSTDECL}}
+, \mbox{\hyperlink{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88ae5d7de361dab2d5b7d3a7cc2aaa09896}{VARDECL}}
+, \mbox{\hyperlink{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a3d72ff383aad26fd6c963b3af51f799c}{FUNCDECL}}
+, \mbox{\hyperlink{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a95fbf728908187e4bb160a31525824d5}{TYPEDEF}}
+, \newline
+\mbox{\hyperlink{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a4d34f53389ed7f28ca91fc31ea360a66}{BLOCK}}
+, \mbox{\hyperlink{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88ab2d67ae4a2984c5db301501aec26a69e}{IFSTMT}}
+, \mbox{\hyperlink{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88ab14ac1d709c793a61b8056394b0eeb7e}{WHILESTMT}}
+, \mbox{\hyperlink{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a5dbe63bbb072fb2780e763aa07be7168}{DOWHILESTMT}}
+, \newline
+\mbox{\hyperlink{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88adf73597b16b10a3085a4eb43d0db7a91}{FORSTMT}}
+, \mbox{\hyperlink{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a164e16076a6ad8e7a449b94281cefb07}{FUNCSTMT}}
+, \mbox{\hyperlink{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88ae189ffb685ddd27dbe353f20035f63b7}{ASSIGMENTSTMT}}
+, \mbox{\hyperlink{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88ab0cd8af157ed30eaa1980da18b07a38d}{EXPR}}
+, \newline
+\mbox{\hyperlink{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a68eb851a1f9fcd748125d372f560ff44}{RETSTMT}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88}\label{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88}} 
+\index{statement.h@{statement.h}!PLStatementType@{PLStatementType}}
+\index{PLStatementType@{PLStatementType}!statement.h@{statement.h}}
+\doxysubsubsection{\texorpdfstring{PLStatementType}{PLStatementType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88}{PLStatement\+Type}} \+: unsigned char\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONSTDECL@{CONSTDECL}!statement.h@{statement.h}}\index{statement.h@{statement.h}!CONSTDECL@{CONSTDECL}}}\mbox{\Hypertarget{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a9207eb5abdcf3cc9e1deb8a9f93836a8}\label{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a9207eb5abdcf3cc9e1deb8a9f93836a8}} 
+CONSTDECL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VARDECL@{VARDECL}!statement.h@{statement.h}}\index{statement.h@{statement.h}!VARDECL@{VARDECL}}}\mbox{\Hypertarget{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88ae5d7de361dab2d5b7d3a7cc2aaa09896}\label{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88ae5d7de361dab2d5b7d3a7cc2aaa09896}} 
+VARDECL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FUNCDECL@{FUNCDECL}!statement.h@{statement.h}}\index{statement.h@{statement.h}!FUNCDECL@{FUNCDECL}}}\mbox{\Hypertarget{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a3d72ff383aad26fd6c963b3af51f799c}\label{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a3d72ff383aad26fd6c963b3af51f799c}} 
+FUNCDECL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TYPEDEF@{TYPEDEF}!statement.h@{statement.h}}\index{statement.h@{statement.h}!TYPEDEF@{TYPEDEF}}}\mbox{\Hypertarget{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a95fbf728908187e4bb160a31525824d5}\label{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a95fbf728908187e4bb160a31525824d5}} 
+TYPEDEF&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLOCK@{BLOCK}!statement.h@{statement.h}}\index{statement.h@{statement.h}!BLOCK@{BLOCK}}}\mbox{\Hypertarget{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a4d34f53389ed7f28ca91fc31ea360a66}\label{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a4d34f53389ed7f28ca91fc31ea360a66}} 
+BLOCK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IFSTMT@{IFSTMT}!statement.h@{statement.h}}\index{statement.h@{statement.h}!IFSTMT@{IFSTMT}}}\mbox{\Hypertarget{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88ab2d67ae4a2984c5db301501aec26a69e}\label{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88ab2d67ae4a2984c5db301501aec26a69e}} 
+IFSTMT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WHILESTMT@{WHILESTMT}!statement.h@{statement.h}}\index{statement.h@{statement.h}!WHILESTMT@{WHILESTMT}}}\mbox{\Hypertarget{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88ab14ac1d709c793a61b8056394b0eeb7e}\label{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88ab14ac1d709c793a61b8056394b0eeb7e}} 
+WHILESTMT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOWHILESTMT@{DOWHILESTMT}!statement.h@{statement.h}}\index{statement.h@{statement.h}!DOWHILESTMT@{DOWHILESTMT}}}\mbox{\Hypertarget{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a5dbe63bbb072fb2780e763aa07be7168}\label{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a5dbe63bbb072fb2780e763aa07be7168}} 
+DOWHILESTMT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FORSTMT@{FORSTMT}!statement.h@{statement.h}}\index{statement.h@{statement.h}!FORSTMT@{FORSTMT}}}\mbox{\Hypertarget{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88adf73597b16b10a3085a4eb43d0db7a91}\label{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88adf73597b16b10a3085a4eb43d0db7a91}} 
+FORSTMT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FUNCSTMT@{FUNCSTMT}!statement.h@{statement.h}}\index{statement.h@{statement.h}!FUNCSTMT@{FUNCSTMT}}}\mbox{\Hypertarget{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a164e16076a6ad8e7a449b94281cefb07}\label{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a164e16076a6ad8e7a449b94281cefb07}} 
+FUNCSTMT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ASSIGMENTSTMT@{ASSIGMENTSTMT}!statement.h@{statement.h}}\index{statement.h@{statement.h}!ASSIGMENTSTMT@{ASSIGMENTSTMT}}}\mbox{\Hypertarget{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88ae189ffb685ddd27dbe353f20035f63b7}\label{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88ae189ffb685ddd27dbe353f20035f63b7}} 
+ASSIGMENTSTMT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXPR@{EXPR}!statement.h@{statement.h}}\index{statement.h@{statement.h}!EXPR@{EXPR}}}\mbox{\Hypertarget{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88ab0cd8af157ed30eaa1980da18b07a38d}\label{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88ab0cd8af157ed30eaa1980da18b07a38d}} 
+EXPR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RETSTMT@{RETSTMT}!statement.h@{statement.h}}\index{statement.h@{statement.h}!RETSTMT@{RETSTMT}}}\mbox{\Hypertarget{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a68eb851a1f9fcd748125d372f560ff44}\label{runtime_2statement_8h_a1bd873dab0d12c075c06ebda67a5dc88a68eb851a1f9fcd748125d372f560ff44}} 
+RETSTMT&\\
+\hline
+
+\end{DoxyEnumFields}

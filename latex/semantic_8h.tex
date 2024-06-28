@@ -1,0 +1,268 @@
+\hypertarget{semantic_8h}{}\doxysection{semantic/semantic.h File Reference}
+\label{semantic_8h}\index{semantic/semantic.h@{semantic/semantic.h}}
+{\ttfamily \#include $<$any$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for semantic.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{semantic_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{semantic_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSemanticToken}{Semantic\+Token}}
+\item 
+struct \mbox{\hyperlink{structFuncionCallSemantic}{Funcion\+Call\+Semantic}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239}{Semantic\+Token\+Type}} \{ \newline
+\mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239accc0377a8afbf50e7094f5c23a8af223}{INVALID}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a6d0c9fc747131795e6e5d0c5119f12cb}{VOID}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a8a86f71ecaa6455516a278ee20cca735}{EOT}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239abbbdde2289802b78dae96b36ea1d6607}{EOE}}
+, \newline
+\mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a11f3de9b2b548c31805cf34d512ee177}{OPERAND}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a2dcbad7477fd40561e8b8198f173bd47}{EQ}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a375b332cf2e0c6d522baf007ef7cb554}{NEQ}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239af3a19508545196b65d938817de495891}{GEQ}}
+, \newline
+\mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a2a8fef531add4d7bc6e1a7dcc0f208ec}{LEQ}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239ac562607189d77eb9dfb707464c1e7b0b}{LT}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239acd6a9bd2a175104eed40f0d33a8b4020}{GT}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a5dd68b1a7db42a1cce4dce09dbaa179e}{NEG}}
+, \newline
+\mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239ad8d79264c6b82476b854c87e3a52732f}{LPAR}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239ae482720450fa15c20ab7207535687be2}{RPAR}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a6fcc416051346daca31c571646af127a}{IDENTIFIER}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a8cf3ea7ff2a6af25b875aff02073b354}{ARRAY\+\_\+\+ACCESS}}
+, \newline
+\mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239afb92cb1aea4049537cc4a5575fa84585}{MEMBER\+\_\+\+ACCESS}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239aa6973db52386dd8430ef667efa9bd0ab}{MEMBER\+\_\+\+ACCESS\+\_\+\+ACTION}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239afe8f37b06a5aa2e00985a4efffab6c2b}{FUNCTION\+\_\+\+CALL}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a8dda46c0fff4137b6f660f56255d967e}{ARGUMENT}}
+, \newline
+\mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239af3d29ccc0ae47a93fd7d5de5a7297d38}{ARGUMENTDECL}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a8baeec6d282f1791ea9954d0c514ed8d}{TERM}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239aec66d48bdd7a5171d7eb5d60840db165}{FACTOR}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239aea8ec660a4ff1a0cf378ac911be7efb2}{EXPRESSION}}
+, \newline
+\mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a761d34579bbc788c0f3376302c52d1fa}{IMMEDIATE\+\_\+\+CHAR}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a5796b1644d2359e3099e86f62500d4ad}{IMMEDIATE\+\_\+\+INTEGER}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239af708db98a5321d21b126b4ecacb1b19d}{IMMEDIATE\+\_\+\+STRING}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a106c3903c2fbef058100dbf6d3506967}{IMMEDIATE\+\_\+\+FLOAT}}
+, \newline
+\mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a8b96ba8a97c2799aa3df85c9cd1734c1}{INCBEFORE}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a9d9ad560c27113eb13787e2cec3aacf0}{INCAFTER}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a61a2f851fa77a3d4253ce2f54b2f712c}{DECBEFORE}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a66fb8164466f646787b24e973fa951c4}{DECAFTER}}
+, \newline
+\mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a9eeb52badb613229884838847294b90d}{ADD}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a241dd841abade20fcb27b8a9f494e1eb}{SUB}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a2cdf52a55876063ec93b7d18bc741f6c}{MUL}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a29bbf66f7f8529ec47e394fb5a36c646}{DIV}}
+, \newline
+\mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239ace73f2d4c57cce724e19eb3aff20963f}{CONDITION\+\_\+\+FACTOR}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a5973a6ddfa8ff97195844a940b3bf19b}{CONDITION\+\_\+\+TERM}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a9f768c0bb1c3e84ca086a85211e978ac}{CONDITION}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a10df3d67626099df882920ba6552f16d}{NOT}}
+, \newline
+\mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a558ffc8f5770d8e4f95f51d822685532}{AND}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a1d00e7dce692e8dc3f6877f035e3a616}{OR}}
+, \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a57a1355d5527355458c7cc08ba70bf94}{ODD}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239}} 
+\index{semantic.h@{semantic.h}!SemanticTokenType@{SemanticTokenType}}
+\index{SemanticTokenType@{SemanticTokenType}!semantic.h@{semantic.h}}
+\doxysubsubsection{\texorpdfstring{SemanticTokenType}{SemanticTokenType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{semantic_8h_a80c2c57331a7c537d09aae0335b3d239}{Semantic\+Token\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INVALID@{INVALID}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!INVALID@{INVALID}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239accc0377a8afbf50e7094f5c23a8af223}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239accc0377a8afbf50e7094f5c23a8af223}} 
+INVALID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VOID@{VOID}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!VOID@{VOID}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a6d0c9fc747131795e6e5d0c5119f12cb}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a6d0c9fc747131795e6e5d0c5119f12cb}} 
+VOID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EOT@{EOT}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!EOT@{EOT}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a8a86f71ecaa6455516a278ee20cca735}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a8a86f71ecaa6455516a278ee20cca735}} 
+EOT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EOE@{EOE}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!EOE@{EOE}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239abbbdde2289802b78dae96b36ea1d6607}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239abbbdde2289802b78dae96b36ea1d6607}} 
+EOE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OPERAND@{OPERAND}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!OPERAND@{OPERAND}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a11f3de9b2b548c31805cf34d512ee177}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a11f3de9b2b548c31805cf34d512ee177}} 
+OPERAND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EQ@{EQ}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!EQ@{EQ}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a2dcbad7477fd40561e8b8198f173bd47}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a2dcbad7477fd40561e8b8198f173bd47}} 
+EQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NEQ@{NEQ}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!NEQ@{NEQ}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a375b332cf2e0c6d522baf007ef7cb554}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a375b332cf2e0c6d522baf007ef7cb554}} 
+NEQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GEQ@{GEQ}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!GEQ@{GEQ}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239af3a19508545196b65d938817de495891}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239af3a19508545196b65d938817de495891}} 
+GEQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEQ@{LEQ}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!LEQ@{LEQ}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a2a8fef531add4d7bc6e1a7dcc0f208ec}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a2a8fef531add4d7bc6e1a7dcc0f208ec}} 
+LEQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LT@{LT}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!LT@{LT}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239ac562607189d77eb9dfb707464c1e7b0b}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239ac562607189d77eb9dfb707464c1e7b0b}} 
+LT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GT@{GT}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!GT@{GT}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239acd6a9bd2a175104eed40f0d33a8b4020}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239acd6a9bd2a175104eed40f0d33a8b4020}} 
+GT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NEG@{NEG}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!NEG@{NEG}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a5dd68b1a7db42a1cce4dce09dbaa179e}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a5dd68b1a7db42a1cce4dce09dbaa179e}} 
+NEG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LPAR@{LPAR}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!LPAR@{LPAR}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239ad8d79264c6b82476b854c87e3a52732f}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239ad8d79264c6b82476b854c87e3a52732f}} 
+LPAR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RPAR@{RPAR}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!RPAR@{RPAR}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239ae482720450fa15c20ab7207535687be2}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239ae482720450fa15c20ab7207535687be2}} 
+RPAR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IDENTIFIER@{IDENTIFIER}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!IDENTIFIER@{IDENTIFIER}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a6fcc416051346daca31c571646af127a}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a6fcc416051346daca31c571646af127a}} 
+IDENTIFIER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARRAY\_ACCESS@{ARRAY\_ACCESS}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!ARRAY\_ACCESS@{ARRAY\_ACCESS}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a8cf3ea7ff2a6af25b875aff02073b354}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a8cf3ea7ff2a6af25b875aff02073b354}} 
+ARRAY\+\_\+\+ACCESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMBER\_ACCESS@{MEMBER\_ACCESS}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!MEMBER\_ACCESS@{MEMBER\_ACCESS}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239afb92cb1aea4049537cc4a5575fa84585}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239afb92cb1aea4049537cc4a5575fa84585}} 
+MEMBER\+\_\+\+ACCESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEMBER\_ACCESS\_ACTION@{MEMBER\_ACCESS\_ACTION}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!MEMBER\_ACCESS\_ACTION@{MEMBER\_ACCESS\_ACTION}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239aa6973db52386dd8430ef667efa9bd0ab}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239aa6973db52386dd8430ef667efa9bd0ab}} 
+MEMBER\+\_\+\+ACCESS\+\_\+\+ACTION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FUNCTION\_CALL@{FUNCTION\_CALL}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!FUNCTION\_CALL@{FUNCTION\_CALL}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239afe8f37b06a5aa2e00985a4efffab6c2b}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239afe8f37b06a5aa2e00985a4efffab6c2b}} 
+FUNCTION\+\_\+\+CALL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARGUMENT@{ARGUMENT}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!ARGUMENT@{ARGUMENT}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a8dda46c0fff4137b6f660f56255d967e}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a8dda46c0fff4137b6f660f56255d967e}} 
+ARGUMENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ARGUMENTDECL@{ARGUMENTDECL}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!ARGUMENTDECL@{ARGUMENTDECL}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239af3d29ccc0ae47a93fd7d5de5a7297d38}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239af3d29ccc0ae47a93fd7d5de5a7297d38}} 
+ARGUMENTDECL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TERM@{TERM}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!TERM@{TERM}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a8baeec6d282f1791ea9954d0c514ed8d}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a8baeec6d282f1791ea9954d0c514ed8d}} 
+TERM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FACTOR@{FACTOR}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!FACTOR@{FACTOR}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239aec66d48bdd7a5171d7eb5d60840db165}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239aec66d48bdd7a5171d7eb5d60840db165}} 
+FACTOR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXPRESSION@{EXPRESSION}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!EXPRESSION@{EXPRESSION}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239aea8ec660a4ff1a0cf378ac911be7efb2}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239aea8ec660a4ff1a0cf378ac911be7efb2}} 
+EXPRESSION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMMEDIATE\_CHAR@{IMMEDIATE\_CHAR}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!IMMEDIATE\_CHAR@{IMMEDIATE\_CHAR}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a761d34579bbc788c0f3376302c52d1fa}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a761d34579bbc788c0f3376302c52d1fa}} 
+IMMEDIATE\+\_\+\+CHAR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMMEDIATE\_INTEGER@{IMMEDIATE\_INTEGER}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!IMMEDIATE\_INTEGER@{IMMEDIATE\_INTEGER}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a5796b1644d2359e3099e86f62500d4ad}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a5796b1644d2359e3099e86f62500d4ad}} 
+IMMEDIATE\+\_\+\+INTEGER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMMEDIATE\_STRING@{IMMEDIATE\_STRING}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!IMMEDIATE\_STRING@{IMMEDIATE\_STRING}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239af708db98a5321d21b126b4ecacb1b19d}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239af708db98a5321d21b126b4ecacb1b19d}} 
+IMMEDIATE\+\_\+\+STRING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMMEDIATE\_FLOAT@{IMMEDIATE\_FLOAT}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!IMMEDIATE\_FLOAT@{IMMEDIATE\_FLOAT}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a106c3903c2fbef058100dbf6d3506967}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a106c3903c2fbef058100dbf6d3506967}} 
+IMMEDIATE\+\_\+\+FLOAT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INCBEFORE@{INCBEFORE}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!INCBEFORE@{INCBEFORE}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a8b96ba8a97c2799aa3df85c9cd1734c1}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a8b96ba8a97c2799aa3df85c9cd1734c1}} 
+INCBEFORE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INCAFTER@{INCAFTER}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!INCAFTER@{INCAFTER}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a9d9ad560c27113eb13787e2cec3aacf0}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a9d9ad560c27113eb13787e2cec3aacf0}} 
+INCAFTER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DECBEFORE@{DECBEFORE}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!DECBEFORE@{DECBEFORE}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a61a2f851fa77a3d4253ce2f54b2f712c}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a61a2f851fa77a3d4253ce2f54b2f712c}} 
+DECBEFORE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DECAFTER@{DECAFTER}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!DECAFTER@{DECAFTER}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a66fb8164466f646787b24e973fa951c4}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a66fb8164466f646787b24e973fa951c4}} 
+DECAFTER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADD@{ADD}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!ADD@{ADD}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a9eeb52badb613229884838847294b90d}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a9eeb52badb613229884838847294b90d}} 
+ADD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUB@{SUB}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!SUB@{SUB}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a241dd841abade20fcb27b8a9f494e1eb}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a241dd841abade20fcb27b8a9f494e1eb}} 
+SUB&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MUL@{MUL}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!MUL@{MUL}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a2cdf52a55876063ec93b7d18bc741f6c}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a2cdf52a55876063ec93b7d18bc741f6c}} 
+MUL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIV@{DIV}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!DIV@{DIV}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a29bbf66f7f8529ec47e394fb5a36c646}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a29bbf66f7f8529ec47e394fb5a36c646}} 
+DIV&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONDITION\_FACTOR@{CONDITION\_FACTOR}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!CONDITION\_FACTOR@{CONDITION\_FACTOR}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239ace73f2d4c57cce724e19eb3aff20963f}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239ace73f2d4c57cce724e19eb3aff20963f}} 
+CONDITION\+\_\+\+FACTOR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONDITION\_TERM@{CONDITION\_TERM}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!CONDITION\_TERM@{CONDITION\_TERM}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a5973a6ddfa8ff97195844a940b3bf19b}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a5973a6ddfa8ff97195844a940b3bf19b}} 
+CONDITION\+\_\+\+TERM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONDITION@{CONDITION}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!CONDITION@{CONDITION}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a9f768c0bb1c3e84ca086a85211e978ac}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a9f768c0bb1c3e84ca086a85211e978ac}} 
+CONDITION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NOT@{NOT}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!NOT@{NOT}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a10df3d67626099df882920ba6552f16d}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a10df3d67626099df882920ba6552f16d}} 
+NOT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AND@{AND}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!AND@{AND}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a558ffc8f5770d8e4f95f51d822685532}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a558ffc8f5770d8e4f95f51d822685532}} 
+AND&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OR@{OR}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!OR@{OR}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a1d00e7dce692e8dc3f6877f035e3a616}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a1d00e7dce692e8dc3f6877f035e3a616}} 
+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ODD@{ODD}!semantic.h@{semantic.h}}\index{semantic.h@{semantic.h}!ODD@{ODD}}}\mbox{\Hypertarget{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a57a1355d5527355458c7cc08ba70bf94}\label{semantic_8h_a80c2c57331a7c537d09aae0335b3d239a57a1355d5527355458c7cc08ba70bf94}} 
+ODD&\\
+\hline
+
+\end{DoxyEnumFields}

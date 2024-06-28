@@ -1,0 +1,9 @@
+<map id="TokenStream::next" name="TokenStream::next">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,148,108"/>
+<area shape="rect" id="node2" href="$classCharStrParser.html#a2087d3c20e2bb03bfe62f021d420b0aa" title=" " alt="" coords="201,5,355,32"/>
+<area shape="rect" id="node4" href="$classIdentifierParser.html#abd00b1511a94e7102d2da2bc3787b7b7" title=" " alt="" coords="196,107,360,133"/>
+<area shape="rect" id="node6" href="$classNumberParser.html#a214df3c4ccf11919dec73dbb783d3223" title=" " alt="" coords="199,56,357,83"/>
+<area shape="rect" id="node7" href="$classSymbolParser.html#aba4655db52f63bd5d8cad9cb3a343cf1" title=" " alt="" coords="201,157,355,184"/>
+<area shape="rect" id="node3" href="$classDFA.html#aa2ee97a6efcca5e9da2c3636d83ab2b8" title=" " alt="" coords="454,56,542,83"/>
+<area shape="rect" id="node5" href="$classKeywordMatcher.html#a11c205797de399de59e8e8c34d55d5b1" title=" " alt="" coords="408,107,588,133"/>
+</map>

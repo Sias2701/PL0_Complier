@@ -1,0 +1,24 @@
+<map id="stream/token_stream.h" name="stream/token_stream.h">
+<area shape="rect" id="node1" title=" " alt="" coords="347,5,521,32"/>
+<area shape="rect" id="node2" href="$input__stream_8h.html" title=" " alt="" coords="106,304,277,331"/>
+<area shape="rect" id="node8" href="$token_8h.html" title=" " alt="" coords="275,229,385,256"/>
+<area shape="rect" id="node11" href="$identifier_8h.html" title=" " alt="" coords="517,80,647,107"/>
+<area shape="rect" id="node17" title=" " alt="" coords="907,229,985,256"/>
+<area shape="rect" id="node19" href="$number_8h.html" title=" " alt="" coords="671,80,794,107"/>
+<area shape="rect" id="node21" href="$symbol_8h.html" title=" " alt="" coords="177,155,299,181"/>
+<area shape="rect" id="node22" href="$charstr_8h.html" title=" " alt="" coords="375,80,493,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,379,79,405"/>
+<area shape="rect" id="node4" title=" " alt="" coords="103,379,183,405"/>
+<area shape="rect" id="node5" title=" " alt="" coords="443,379,502,405"/>
+<area shape="rect" id="node6" title=" " alt="" coords="208,379,273,405"/>
+<area shape="rect" id="node7" title=" " alt="" coords="297,379,355,405"/>
+<area shape="rect" id="node9" title=" " alt="" coords="301,304,348,331"/>
+<area shape="rect" id="node10" title=" " alt="" coords="372,304,435,331"/>
+<area shape="rect" id="node12" href="$dfa_8h.html" title=" " alt="" coords="468,155,523,181"/>
+<area shape="rect" id="node16" href="$keyword_8h.html" title=" " alt="" coords="687,155,816,181"/>
+<area shape="rect" id="node13" title=" " alt="" coords="494,229,609,256"/>
+<area shape="rect" id="node14" title=" " alt="" coords="633,229,757,256"/>
+<area shape="rect" id="node15" title=" " alt="" coords="409,229,469,256"/>
+<area shape="rect" id="node18" title=" " alt="" coords="782,229,833,256"/>
+<area shape="rect" id="node20" title=" " alt="" coords="840,155,908,181"/>
+</map>

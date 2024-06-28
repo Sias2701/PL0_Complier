@@ -1,0 +1,10 @@
+<map id="DFA::reset" name="DFA::reset">
+<area shape="rect" id="node1" title=" " alt="" coords="697,123,785,149"/>
+<area shape="rect" id="node2" href="$classCharStrParser.html#a5bc47e1feb08650d1e4990ef6674a60e" title=" " alt="" coords="443,5,649,32"/>
+<area shape="rect" id="node3" href="$classIdentifierParser.html#a947b2e0df97f6f34b38f5fa2a15cce39" title=" " alt="" coords="453,57,639,98"/>
+<area shape="rect" id="node4" href="$classCharStrParser.html#a2087d3c20e2bb03bfe62f021d420b0aa" title=" " alt="" coords="469,123,623,149"/>
+<area shape="rect" id="node7" href="$classIdentifierParser.html#abd00b1511a94e7102d2da2bc3787b7b7" title=" " alt="" coords="464,173,628,200"/>
+<area shape="rect" id="node8" href="$classNumberParser.html#a214df3c4ccf11919dec73dbb783d3223" title=" " alt="" coords="467,224,625,251"/>
+<area shape="rect" id="node5" href="$classTokenStream.html#a0725fbf1b491dd53d55bd128ff1da889" title=" " alt="" coords="252,173,395,200"/>
+<area shape="rect" id="node6" href="$classTokenStream.html#abe7d920ab5ebde9939bb65da170d0eee" title=" " alt="" coords="5,173,204,200"/>
+</map>
